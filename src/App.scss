@@ -1,0 +1,170 @@
+@import '~bootstrap/scss/bootstrap';
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
+
+body {
+  --primary-bg-color: var(--primary-color);
+  --secondary-bg-color: var(--secondary-color);
+  --success-bg-color: var(--success-color);
+  --danger-bg-color: var(--danger-color);
+  --warning-bg-color: var(--warning-color);
+  --info-bg-color: var(--info-color);
+  --light-bg-color: var(--light-color);
+  --dark-bg-color: var(--dark-color);
+}
+
+// Button variants
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  border-color: var(--warning-color);
+}
+
+.btn-info {
+  background-color: var(--info-color);
+  border-color: var(--info-color);
+}
+
+.btn-light {
+  background-color: var(--light-color);
+  border-color: var(--light-color);
+  color: #000;
+}
+
+.btn-dark {
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
+}
+
+// Alert variants
+.alert-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.alert-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: #fff;
+}
+
+.alert-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+  color: #fff;
+}
+
+.alert-danger {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+  color: #fff;
+}
+
+.alert-warning {
+  background-color: var(--warning-color);
+  border-color: var(--warning-color);
+  color: #212529;
+}
+
+.alert-info {
+  background-color: var(--info-color);
+  border-color: var(--info-color);
+  color: #fff;
+}
+
+.alert-light {
+  background-color: var(--light-color);
+  border-color: var(--light-color);
+  color: #212529;
+}
+
+.alert-dark {
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
+  color: #fff;
+}
+
+// Card variants
+.card {
+  &.bg-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+  }
+  &.bg-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #fff;
+  }
+  &.bg-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: #fff;
+  }
+  &.bg-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: #fff;
+  }
+  &.bg-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: #212529;
+  }
+  &.bg-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+    color: #fff;
+  }
+  &.bg-light {
+    background-color: var(--light-color);
+    border-color: var(--light-color);
+    color: #212529;
+  }
+  &.bg-dark {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+    color: #fff;
+  }
+}
+
+// Navbar variants
+.navbar {
+  &.navbar-light {
+    background-color: var(--light-color);
+  }
+  &.navbar-dark {
+    background-color: var(--dark-color);
+  }
+}
+
+// Additional custom styling for other Bootstrap components as needed

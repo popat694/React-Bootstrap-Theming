@@ -1,0 +1,31 @@
+// src/index.scss
+$primary-color: #007bff !default;
+$secondary-color: #6c757d !default;
+$success-color: #28a745 !default;
+$danger-color: #dc3545 !default;
+$warning-color: #ffc107 !default;
+$info-color: #17a2b8 !default;
+$light-color: #f8f9fa !default;
+$dark-color: #343a40 !default;
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --success-color: #{$success-color};
+  --danger-color: #{$danger-color};
+  --warning-color: #{$warning-color};
+  --info-color: #{$info-color};
+  --light-color: #{$light-color};
+  --dark-color: #{$dark-color};
+}
+
+body {
+  --primary-bg-color: var(--primary-color);
+  --secondary-bg-color: var(--secondary-color);
+  --success-bg-color: var(--success-color);
+  --danger-bg-color: var(--danger-color);
+  --warning-bg-color: var(--warning-color);
+  --info-bg-color: var(--info-color);
+  --light-bg-color: var(--light-color);
+  --dark-bg-color: var(--dark-color);
+}
