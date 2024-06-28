@@ -73,15 +73,27 @@ const ThemeSwitcher = () => {
   ];
 
   // State for theme and selected preset index
-  const [theme, setTheme] = useState(defaultPresets[0].colors); // Default to the first preset
-  const [selectedPresetIndex, setSelectedPresetIndex] = useState(0);
+  // const [theme, setTheme] = useState(defaultPresets[0].colors); // Default to the first preset
+  // const [selectedPresetIndex, setSelectedPresetIndex] = useState(0);
 
   // Initialize dark mode state with default value or value from local storage
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedDarkMode = localStorage.getItem('isDarkMode');
     return savedDarkMode ? JSON.parse(savedDarkMode) : false;
   });
+  // Initialize theme from local storage or default to the first preset
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? JSON.parse(savedTheme) : defaultPresets[0].colors;
+  });
 
+  // Initialize selected preset index from local storage or default to 0
+  const [selectedPresetIndex, setSelectedPresetIndex] = useState(() => {
+    const savedPresetIndex = localStorage.getItem('selectedPresetIndex');
+    return savedPresetIndex ? JSON.parse(savedPresetIndex) : 0;
+  });
+
+  
   // Apply theme colors and dark mode from local storage on initial load
   useEffect(() => {
     applyTheme(theme);
@@ -127,7 +139,7 @@ const ThemeSwitcher = () => {
 
   return (
     <div className="theme-switcher">
-      <div className="toggle-switch">
+      <div className="toggle-switch mt-2">
         <label>
           <input type="checkbox" checked={isDarkMode} onChange={toggleDarkMode} />
           <span className="slider"></span>
@@ -149,7 +161,6 @@ const ThemeSwitcher = () => {
         </div>
       </div>
       <div className="color-pickers">
-        <h3>Customize Theme</h3>
         {Object.keys(theme).map((color) => (
           <div key={color} className="color-picker">
             <label>{color}</label>
